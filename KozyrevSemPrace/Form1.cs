@@ -61,12 +61,16 @@ namespace KozyrevSemPrace
 
                 }
             }
-            for (int it = 0; it < spravceP.Count; it++)
+            
+            for(int it = 0; it < spravceP.Count; it++)
             {
                 if (it != null)
                 {
-
-                    pacientGrid.Rows.Add(spravceP[it].Jmeno, spravceP[it].Prijmeni, spravceP[it].DatumNarozeni, spravceP[it].lekar, new Button());
+                    Button btn = new Button();
+                    btn.Name = "Informace";
+                    btn.Text = "Informace o pacientu";
+                    btn.Click += informaceClick;
+                    pacientGrid.Rows.Add(spravceP[it].Jmeno, spravceP[it].Prijmeni, spravceP[it].DatumNarozeni, spravceP[it].lekar, btn);
 
                 }
             }
@@ -79,8 +83,13 @@ namespace KozyrevSemPrace
             if (addPacient.pacient != null)
             {
                 spravceP.Add(addPacient.pacient);
+                if(addPacient.pacient.lekar!=null) spravceL.AddPacient(addPacient.pacient.lekar, addPacient.pacient);
                 reload();
             }
+        }
+        private void informaceClick(object sender, EventArgs e)
+        {
+
         }
     }
 }

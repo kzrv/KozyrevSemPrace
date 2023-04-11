@@ -49,7 +49,7 @@ namespace KozyrevSemPrace
         {
             if (checkRight())
             {
-                Lekar? lekar = comboLekar.SelectedItem=="None"? null : (Lekar)list[comboLekar.SelectedIndex+1];
+                Lekar? lekar = comboLekar.SelectedItem=="None"? null : (Lekar)list[comboLekar.SelectedIndex-1];
                 Info info = new Info(diagnoza.Text,prijetiBox.Text,cisloBox.Text,(Oddeleni) oddeleniCombo.SelectedItem);
                 this.pacient = new(jmenoBox.Text, PrijmeniBox.Text, narozeniBox.Text, lekar, info);
                 Close();

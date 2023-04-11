@@ -25,7 +25,7 @@ namespace KozyrevSemPrace.NemocniceLibrary
             pacienty = new List<Pacient>();
         }
 
-        public void AddPacient(ref Pacient pacient)
+        public void AddPacient(Pacient pacient)
         {
             if(!pacienty.Contains(pacient)) { 
                 pacienty.Add(pacient);

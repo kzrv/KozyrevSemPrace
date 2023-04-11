@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.pacientGrid = new System.Windows.Forms.DataGridView();
-            this.nameP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prijmeni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vek = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lekar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.info = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lekarGrid = new System.Windows.Forms.DataGridView();
             this.jmenoL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prijmeniL = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +43,11 @@
             this.edit = new System.Windows.Forms.Button();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.nameP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prijmeni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vek = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lekar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.info = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pacientGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lekarGrid)).BeginInit();
             this.SuspendLayout();
@@ -65,46 +65,8 @@
             this.pacientGrid.Name = "pacientGrid";
             this.pacientGrid.RowHeadersWidth = 72;
             this.pacientGrid.RowTemplate.Height = 37;
-            this.pacientGrid.Size = new System.Drawing.Size(1187, 1001);
+            this.pacientGrid.Size = new System.Drawing.Size(1186, 1000);
             this.pacientGrid.TabIndex = 0;
-            // 
-            // nameP
-            // 
-            this.nameP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameP.HeaderText = "Jmeno";
-            this.nameP.MinimumWidth = 9;
-            this.nameP.Name = "nameP";
-            // 
-            // prijmeni
-            // 
-            this.prijmeni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.prijmeni.HeaderText = "Prijmeni";
-            this.prijmeni.MinimumWidth = 9;
-            this.prijmeni.Name = "prijmeni";
-            // 
-            // vek
-            // 
-            this.vek.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.vek.HeaderText = "Datum narozeni";
-            this.vek.MinimumWidth = 9;
-            this.vek.Name = "vek";
-            // 
-            // lekar
-            // 
-            this.lekar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lekar.HeaderText = "Lekar";
-            this.lekar.MinimumWidth = 9;
-            this.lekar.Name = "lekar";
-            // 
-            // info
-            // 
-            this.info.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.info.HeaderText = "INFO";
-            this.info.MinimumWidth = 9;
-            this.info.Name = "info";
-            this.info.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.info.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.info.Text = "INFO";
             // 
             // lekarGrid
             // 
@@ -119,7 +81,7 @@
             this.lekarGrid.Name = "lekarGrid";
             this.lekarGrid.RowHeadersWidth = 72;
             this.lekarGrid.RowTemplate.Height = 37;
-            this.lekarGrid.Size = new System.Drawing.Size(1187, 1001);
+            this.lekarGrid.Size = new System.Drawing.Size(1186, 1000);
             this.lekarGrid.TabIndex = 1;
             // 
             // jmenoL
@@ -163,9 +125,9 @@
             // 
             // addP
             // 
-            this.addP.Location = new System.Drawing.Point(12, 1073);
+            this.addP.Location = new System.Drawing.Point(12, 1072);
             this.addP.Name = "addP";
-            this.addP.Size = new System.Drawing.Size(175, 63);
+            this.addP.Size = new System.Drawing.Size(176, 63);
             this.addP.TabIndex = 2;
             this.addP.Text = "Novy pacient";
             this.addP.UseVisualStyleBackColor = true;
@@ -173,9 +135,9 @@
             // 
             // addL
             // 
-            this.addL.Location = new System.Drawing.Point(193, 1073);
+            this.addL.Location = new System.Drawing.Point(194, 1072);
             this.addL.Name = "addL";
-            this.addL.Size = new System.Drawing.Size(175, 63);
+            this.addL.Size = new System.Drawing.Size(176, 63);
             this.addL.TabIndex = 3;
             this.addL.Text = "Novy lekar";
             this.addL.UseVisualStyleBackColor = true;
@@ -183,27 +145,27 @@
             // 
             // ulozit
             // 
-            this.ulozit.Location = new System.Drawing.Point(374, 1073);
+            this.ulozit.Location = new System.Drawing.Point(374, 1072);
             this.ulozit.Name = "ulozit";
-            this.ulozit.Size = new System.Drawing.Size(175, 63);
+            this.ulozit.Size = new System.Drawing.Size(176, 63);
             this.ulozit.TabIndex = 4;
             this.ulozit.Text = "Ulozit";
             this.ulozit.UseVisualStyleBackColor = true;
             // 
             // nacist
             // 
-            this.nacist.Location = new System.Drawing.Point(555, 1073);
+            this.nacist.Location = new System.Drawing.Point(555, 1072);
             this.nacist.Name = "nacist";
-            this.nacist.Size = new System.Drawing.Size(175, 63);
+            this.nacist.Size = new System.Drawing.Size(176, 63);
             this.nacist.TabIndex = 5;
             this.nacist.Text = "Nacist";
             this.nacist.UseVisualStyleBackColor = true;
             // 
             // smazat
             // 
-            this.smazat.Location = new System.Drawing.Point(736, 1073);
+            this.smazat.Location = new System.Drawing.Point(736, 1072);
             this.smazat.Name = "smazat";
-            this.smazat.Size = new System.Drawing.Size(175, 63);
+            this.smazat.Size = new System.Drawing.Size(176, 63);
             this.smazat.TabIndex = 8;
             this.smazat.Text = "Smazat";
             this.smazat.UseVisualStyleBackColor = true;
@@ -211,9 +173,9 @@
             // 
             // edit
             // 
-            this.edit.Location = new System.Drawing.Point(917, 1073);
+            this.edit.Location = new System.Drawing.Point(916, 1072);
             this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(175, 63);
+            this.edit.Size = new System.Drawing.Size(176, 63);
             this.edit.TabIndex = 9;
             this.edit.Text = "Editovat";
             this.edit.UseVisualStyleBackColor = true;
@@ -222,7 +184,7 @@
             // 
             this.comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(1205, 21);
+            this.comboBox.Location = new System.Drawing.Point(1204, 21);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(228, 38);
             this.comboBox.TabIndex = 10;
@@ -231,17 +193,56 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1439, 24);
+            this.label1.Location = new System.Drawing.Point(1438, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 30);
             this.label1.TabIndex = 11;
             this.label1.Text = "TABULKA";
             // 
+            // nameP
+            // 
+            this.nameP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameP.HeaderText = "Jmeno";
+            this.nameP.MinimumWidth = 9;
+            this.nameP.Name = "nameP";
+            // 
+            // prijmeni
+            // 
+            this.prijmeni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.prijmeni.HeaderText = "Prijmeni";
+            this.prijmeni.MinimumWidth = 9;
+            this.prijmeni.Name = "prijmeni";
+            // 
+            // vek
+            // 
+            this.vek.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.vek.HeaderText = "Datum narozeni";
+            this.vek.MinimumWidth = 9;
+            this.vek.Name = "vek";
+            // 
+            // lekar
+            // 
+            this.lekar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lekar.HeaderText = "Lekar";
+            this.lekar.MinimumWidth = 9;
+            this.lekar.Name = "lekar";
+            // 
+            // info
+            // 
+            this.info.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.info.HeaderText = "INFO";
+            this.info.MinimumWidth = 9;
+            this.info.Name = "info";
+            this.info.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.info.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.info.Text = "INFO";
+            this.info.UseColumnTextForButtonValue = true;
+            // 
             // NemocniceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1553, 1179);
+            this.ClientSize = new System.Drawing.Size(1552, 1168);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.edit);

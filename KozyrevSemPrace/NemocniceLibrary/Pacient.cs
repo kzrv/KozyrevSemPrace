@@ -28,6 +28,9 @@ namespace KozyrevSemPrace.NemocniceLibrary
             }
         }
 
-       
+        public override string? ToString()
+        {
+            return $"{Jmeno} {Prijmeni} {info.RodneCislo}";
+        }
     }
 }

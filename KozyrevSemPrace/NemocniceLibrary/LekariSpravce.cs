@@ -30,5 +30,16 @@ namespace KozyrevSemPrace.NemocniceLibrary
         {
             list.Remove(lekar);
         }
+        public void AddPacient(Lekar lekar,Pacient pacient)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i]==lekar)
+                {
+                    lekar.AddPacient(pacient);
+                    list[i] = lekar;
+                }
+            }
+        }
     }
 }
