@@ -114,15 +114,13 @@ namespace ChampionsLeagueLibrary
 
         public void CopyTo(Array array, int index)
         {
-            if (begin == null) return;
+            if (begin == null || array == null) return;
             Node node = begin;
-            int i = 1;
-            array.SetValue(null, 0);
-            while(node != null)
+            int i = index;
+            while (node != null && i < array.Length)
             {
                 array.SetValue(node.value, i++);
-                if (node.next != null) node = node.next;
-                else break;
+                node = node.next;
             }
         }
 

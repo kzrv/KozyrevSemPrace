@@ -28,51 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.info = new System.Windows.Forms.Button();
-            this.smazat = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            listView1 = new ListView();
+            info = new Button();
+            smazat = new Button();
+            button1 = new Button();
+            SuspendLayout();
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(12, 16);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(472, 573);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            listView1.Alignment = ListViewAlignment.Left;
+            listView1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            listView1.Location = new Point(12, 16);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(472, 573);
+            listView1.TabIndex = 0;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.List;
             // 
             // info
             // 
-            this.info.Location = new System.Drawing.Point(12, 608);
-            this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(233, 40);
-            this.info.TabIndex = 1;
-            this.info.Text = "INFORMACE";
-            this.info.UseVisualStyleBackColor = true;
-            this.info.Click += new System.EventHandler(this.info_Click);
+            info.Location = new Point(12, 608);
+            info.Name = "info";
+            info.Size = new Size(233, 40);
+            info.TabIndex = 1;
+            info.Text = "INFORMACE";
+            info.UseVisualStyleBackColor = true;
+            info.Click += info_Click;
             // 
             // smazat
             // 
-            this.smazat.Location = new System.Drawing.Point(251, 608);
-            this.smazat.Name = "smazat";
-            this.smazat.Size = new System.Drawing.Size(233, 40);
-            this.smazat.TabIndex = 2;
-            this.smazat.Text = "SMAZAT";
-            this.smazat.UseVisualStyleBackColor = true;
-            this.smazat.Click += new System.EventHandler(this.smazat_Click);
+            smazat.Location = new Point(251, 608);
+            smazat.Name = "smazat";
+            smazat.Size = new Size(233, 40);
+            smazat.TabIndex = 2;
+            smazat.Text = "SMAZAT/VRATIT";
+            smazat.UseVisualStyleBackColor = true;
+            smazat.Click += smazat_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(13, 662);
+            button1.Name = "button1";
+            button1.Size = new Size(471, 40);
+            button1.TabIndex = 3;
+            button1.Text = "ACCEPT";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // PacientList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 662);
-            this.Controls.Add(this.smazat);
-            this.Controls.Add(this.info);
-            this.Controls.Add(this.listView1);
-            this.Name = "PacientList";
-            this.Text = "PacientList";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(496, 707);
+            Controls.Add(button1);
+            Controls.Add(smazat);
+            Controls.Add(info);
+            Controls.Add(listView1);
+            MaximizeBox = false;
+            Name = "PacientList";
+            Text = "PacientList";
+            ResumeLayout(false);
         }
 
         #endregion
@@ -80,5 +95,6 @@
         private ListView listView1;
         private Button info;
         private Button smazat;
+        private Button button1;
     }
 }

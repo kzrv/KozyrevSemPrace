@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KozyrevSemPrace.NemocniceLibrary
 {
-    public class Pacient
+    public class Pacient             
     {
         public string Jmeno { get; set; }
         public string Prijmeni { get; set; }
@@ -31,6 +31,11 @@ namespace KozyrevSemPrace.NemocniceLibrary
         public override string? ToString()
         {
             return $"{Jmeno} {Prijmeni} {info.RodneCislo}";
+        }
+        public string toFile()
+        {
+            string lek = lekar != null ? lekar.RodneCislo : "null";
+            return $"{Jmeno};{Prijmeni};{DatumNarozeni};{lek};{info.toFile()}";
         }
     }
 }

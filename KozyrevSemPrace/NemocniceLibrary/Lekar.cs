@@ -10,7 +10,7 @@ namespace KozyrevSemPrace.NemocniceLibrary
     {
         public string Jmeno { get; set; }
         public string Prijmeni { get; set; }
-        public string RodneCislo { get; set; }
+        public string RodneCislo { get; set; }  // make unique
 
         public Oddeleni oddeleni { get; set; }
 
@@ -35,18 +35,21 @@ namespace KozyrevSemPrace.NemocniceLibrary
                 pacient.lekar = this;
             }
         }
-        public void DeletePacient(ref Pacient pacient)
+        public void DeletePacient(Pacient pacient)
         {
             if (pacienty.Contains(pacient))
             {
                 pacienty.Remove(pacient);
-                if (pacient.lekar == this) pacient.lekar = null;
             }
         }
 
         public override string? ToString()
         {
             return Jmeno + " " + Prijmeni;
+        }
+        public string toFile()
+        {
+            return $"{Jmeno};{Prijmeni};{RodneCislo};{oddeleni}";
         }
     }
 }

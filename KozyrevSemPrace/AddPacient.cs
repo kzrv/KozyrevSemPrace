@@ -27,7 +27,7 @@ namespace KozyrevSemPrace
             oddeleniCombo.SelectedIndex = 0;
             comboLekar.Items.Add("None");
             comboLekar.SelectedItem = "None";
-            for (int i = 0; i<list.Count; i++)
+            for (int i = 0; i < list.Count; i++)
             {
                 comboLekar.Items.Add(list[i].ToString());
             }
@@ -49,24 +49,21 @@ namespace KozyrevSemPrace
         {
             if (checkRight())
             {
-                Lekar? lekar = comboLekar.SelectedItem=="None"? null : (Lekar)list[comboLekar.SelectedIndex-1];
-                Info info = new Info(diagnoza.Text,prijetiBox.Text,cisloBox.Text,(Oddeleni) oddeleniCombo.SelectedItem);
+                string currentTime = DateTime.Now.ToString("HH.mm.ss") + " " + DateTime.Now.ToString("dd/MM/yyyy"); ;
+
+                Lekar? lekar = comboLekar.SelectedItem == "None" ? null : (Lekar)list[comboLekar.SelectedIndex - 1];
+                Info info = new Info(diagnoza.Text, "", currentTime, cisloBox.Text, (Oddeleni)oddeleniCombo.SelectedItem);
                 this.pacient = new(jmenoBox.Text, PrijmeniBox.Text, narozeniBox.Text, lekar, info);
                 Close();
             }
-            
+
         }
         private bool checkRight()
         {
             if (jmenoBox.Text.Length > 0 && PrijmeniBox.Text.Length > 0 && cisloBox.Text.Length > 0)
             {
                 Regex r1 = new Regex("^(0[1-9]|[12][0-9]|3[01])[-/.](0[1-9]|1[012])[-/.](19|20)\\d\\d$");
-                if (!r1.IsMatch(prijetiBox.Text))
-                {
-                    MessageBox.Show("Spatny format datum prijety");
-                    return false;
-                }
-                if(!r1.IsMatch(narozeniBox.Text))
+                if (!r1.IsMatch(narozeniBox.Text))
                 {
                     MessageBox.Show("Spatny format datum narozeni");
                     return false;

@@ -9,7 +9,7 @@ namespace KozyrevSemPrace.NemocniceLibrary
 {
      public enum Oddeleni
     {
-        Chirurgicke,
+        Chirurgicke = 0,
         Infekcni,
         Onkologie,
         ORL,
